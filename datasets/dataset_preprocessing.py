@@ -56,6 +56,19 @@ def build_training_set(dataset):
     non_toxic_downsampled = resample(non_toxic_entries, n_samples=len(toxic_entries), random_state=42)
 
     final_training_set = pd.concat([toxic_entries, non_toxic_downsampled])
+    final_training_set.reset_index(drop=True, inplace=True)
+
+    print(final_training_set)
+
+    idx_to_remove = list()
+    for i in range(0, len(final_training_set)):
+        row = final_training_set.iloc[i]
+        if row['comment_text'] is '':
+            idx_to_remove.append(i)
+  
+    final_training_set = final_training_set.drop(idx_to_remove)
+    final_training_set = final_training_set[['comment_text', 'toxic']]
+
     return final_training_set
 
 ### MAIN ###
