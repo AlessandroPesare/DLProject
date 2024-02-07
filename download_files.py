@@ -11,7 +11,9 @@ def download_datasets():
         'training_set.csv': 'https://drive.google.com/uc?export=download&id=1oK-jSYp26iAlpM0otPEapCEfgdmfb7Fv',
         'training_set_lemmatized.csv': 'https://drive.google.com/uc?export=download&id=1nJvsWvwk_2lWtlmsTEp2i_-coQwI0OFN',
         'test_set.csv': 'https://drive.google.com/uc?export=download&id=112Q6ebP109U-bvPNcRhSUTL20-_uGKf4',
-        'test_set_lemmatized.csv': 'https://drive.google.com/uc?export=download&id=1rJ2kGp7J3E-P7O22_eshpPO0ZloJbx_Q'
+        'test_set_lemmatized.csv': 'https://drive.google.com/uc?export=download&id=1rJ2kGp7J3E-P7O22_eshpPO0ZloJbx_Q',
+        'X_train_bert.csv': 'https://drive.google.com/uc?export=download&id=1Ighh847Te0cG8OFqVVaThNp7Yu9i-HCe',
+        'X_test_bert.csv': 'https://drive.google.com/uc?export=download&id=13qt1iTT9v6i2SdlpY3HRp5W9eZCpd46R'
         }
     
     for entry in file_dict.items():
@@ -26,10 +28,7 @@ def download_datasets():
     print("Dataset Downloaded.\n\n")
 
 def download_pretrained_base_models():
-    pass
-
-def download_pretrained_bert_boosted_models():
-    print("DATASET DOWNLOADING")
+    print("BASE MODELS DOWNLOADING")
     base_model_folder = "./models/base/"
     models_dict = {
         'rf_classifier_100.zip': 'https://drive.google.com/uc?export=download&id=1gosZgq3LQkcDf0HgpTyC1ERwyiG6smJW',
@@ -46,16 +45,20 @@ def download_pretrained_bert_boosted_models():
         url = entry[1]
         name = entry[0]
         file_path = base_model_folder + name
-        if os.path.exists(file_path[0:-4] + 'pkl') is False:
+        if os.path.exists(file_path[0:-4] + '.pkl') is False:
             print("Downloading File:", entry[0])
             gdown.download(url=url, output=file_path)
 
             with zipfile.ZipFile(file_path, 'r') as zip_ref:
-                zip_ref.extract(name[0:-4] + '.pkl', path=base_model_folder + name[0:-4] + '.pkl')
+                zip_ref.extractall(path=base_model_folder)
             os.remove(file_path)
         else:
-            print("File '" + str(entry[0] + "' already exists"))
+            print("File '" + str(name[0:-4] + '.pkl' + "' already exists"))
+    
+    print("Base Models Downloaded.\n\n")
 
+def download_pretrained_bert_boosted_models():
+    pass
 
 ### #### ###
 ### MAIN ###
