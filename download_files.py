@@ -58,7 +58,30 @@ def download_pretrained_base_models():
     print("Base Models Downloaded.\n\n")
 
 def download_pretrained_bert_boosted_models():
-    pass
+    print("BERT-BOOSTED MODELS DOWNLOADING")
+    base_model_folder = "./models/base/"
+    models_dict = {
+        # 'rf_classifier_100.zip': '',
+        # 'rf_classifier_500.zip': '',
+        'linear_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=11gqNqHKjf-8pyLZ24mTJg8PzpFg9wq_c',
+        'poly_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1hRGdROKYpv3i6FsI5t8QhsAhRHUCdiXQ'
+    }
+
+    for entry in models_dict.items():
+        url = entry[1]
+        name = entry[0]
+        file_path = base_model_folder + name
+        if os.path.exists(file_path[0:-4] + '.pkl') is False:
+            print("Downloading File:", entry[0])
+            gdown.download(url=url, output=file_path)
+
+            with zipfile.ZipFile(file_path, 'r') as zip_ref:
+                zip_ref.extractall(path=base_model_folder)
+            os.remove(file_path)
+        else:
+            print("File '" + str(name[0:-4] + '.pkl' + "' already exists"))
+    
+    print("Base Models Downloaded.\n\n")
 
 ### #### ###
 ### MAIN ###
