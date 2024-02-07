@@ -39,6 +39,8 @@ def download_pretrained_base_models():
         'linear_svm_classifier_lem.zip': 'https://drive.google.com/uc?export=download&id=1ac_YllwyMC5jciY1mrn15oKEEdvctFQT',
         'poly_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1GXhRisL7W-Yt5IDaD28Y4Bwx9_DR2o9x',
         'poly_svm_classifier_lem.zip': 'https://drive.google.com/uc?export=download&id=1KQp0R1puiSnmfXrmh4316b6QZlzN7VvY'
+        # 'fully_connected_nn.zip': ''
+        # 'fully_connected_nn_lem.zip': ''
     }
 
     for entry in models_dict.items():
@@ -63,8 +65,10 @@ def download_pretrained_bert_boosted_models():
     models_dict = {
         # 'rf_classifier_100.zip': '',
         # 'rf_classifier_500.zip': '',
-        'linear_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=11gqNqHKjf-8pyLZ24mTJg8PzpFg9wq_c',
-        'poly_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1hRGdROKYpv3i6FsI5t8QhsAhRHUCdiXQ'
+        'linear_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1nTr8rBzaZ1G75qptrgA9heViJI1L6xKq',
+        'poly_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1mNlK6abbYiupbznVOdi3wXmYHt7X6ZVN'
+        # 'fully_connected_nn.zip': ''
+        # 'fully_connected_nn_lem.zip': ''
     }
 
     for entry in models_dict.items():
