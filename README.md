@@ -1,1 +1,1 @@
-# DLProject
+# Exploring BERT for Hate Detection
