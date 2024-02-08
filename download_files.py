@@ -61,7 +61,7 @@ def download_pretrained_base_models():
 
 def download_pretrained_bert_boosted_models():
     print("BERT-BOOSTED MODELS DOWNLOADING")
-    base_model_folder = "./models/base/"
+    base_model_folder = "./models/bert_boosted/"
     models_dict = {
         # 'rf_classifier_100.zip': '',
         # 'rf_classifier_500.zip': '',
