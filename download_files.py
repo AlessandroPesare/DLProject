@@ -3,7 +3,7 @@ import zipfile
 import os
 
 def download_datasets():
-    print("DATASET DOWNLOADING")
+    print("DOWNLOADING DATASETS...")
     dataset_folder = "./datasets/"
     file_dict = {
         'jigsaw_train_set.csv': 'https://drive.google.com/uc?export=download&id=1DG3WQxA-Qx358k1bcGXtmkdwXMMGM4yF',
@@ -28,19 +28,17 @@ def download_datasets():
     print("Dataset Downloaded.\n\n")
 
 def download_pretrained_base_models():
-    print("BASE MODELS DOWNLOADING")
+    print("DOWNLOADING BASE MODELS...")
     base_model_folder = "./models/base/"
     models_dict = {
-        'rf_classifier_100.zip': 'https://drive.google.com/uc?export=download&id=1gosZgq3LQkcDf0HgpTyC1ERwyiG6smJW',
-        'rf_classifier_lem_100.zip': 'https://drive.google.com/uc?export=download&id=1JyQtwkgZ40CwJHR3B3Wq3InGIgZl7DdC',
-        'rf_classifier_500.zip': 'https://drive.google.com/uc?export=download&id=14DuDqx15NLGLM_H4Q4qEMb4bxH-G9uLz',
-        'rf_classifier_lem_500.zip': 'https://drive.google.com/uc?export=download&id=1ZIX86p6GgHY-VNOACWT6F_u0E7kqWNp0',
-        'linear_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1KNZ3B2ebSy6LRUJMGOdvQXM0Pa_917Dv',
-        'linear_svm_classifier_lem.zip': 'https://drive.google.com/uc?export=download&id=1ac_YllwyMC5jciY1mrn15oKEEdvctFQT',
-        'poly_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1GXhRisL7W-Yt5IDaD28Y4Bwx9_DR2o9x',
-        'poly_svm_classifier_lem.zip': 'https://drive.google.com/uc?export=download&id=1KQp0R1puiSnmfXrmh4316b6QZlzN7VvY'
-        # 'fully_connected_nn.zip': ''
-        # 'fully_connected_nn_lem.zip': ''
+        'rf_classifier_500.zip': 'https://drive.google.com/uc?export=download&id=1cLryAR76cxh3085c4jJ6fYhetFCT6eI7',
+        'rf_classifier_500_lem.zip': 'https://drive.google.com/uc?export=download&id=1lLwjArgj_IbNOIhVfXwO68j_8OYOWCHx',
+        'rf_classifier_1000.zip': 'https://drive.google.com/uc?export=download&id=1QHQNg208o8azTExGy_IYDE0EX1tq8GSr',
+        'rf_classifier_1000_lem.zip': 'https://drive.google.com/uc?export=download&id=1P3lp_v8Z1XjuMj4NqwwJ9j2KfwcqF_ft',
+        'linear_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1uQHITEILMyeOR4pCjlxd613DFMbpVYgq',
+        'linear_svm_classifier_lem.zip': 'https://drive.google.com/uc?export=download&id=1hqnEpnow_5TEI0Bjcwn5vYORfSbrsi85'
+        # 'nn_classifier.zip': 'Work in Progress!'
+        # 'nn_classifier_lem.zip': 'Work in Progress!'
     }
 
     for entry in models_dict.items():
@@ -60,15 +58,13 @@ def download_pretrained_base_models():
     print("Base Models Downloaded.\n\n")
 
 def download_pretrained_bert_boosted_models():
-    print("BERT-BOOSTED MODELS DOWNLOADING")
+    print("DOWNLOADING BERT-BOOSTED MODELS...")
     base_model_folder = "./models/bert_boosted/"
     models_dict = {
-        # 'rf_classifier_100.zip': '',
-        # 'rf_classifier_500.zip': '',
-        'linear_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1nTr8rBzaZ1G75qptrgA9heViJI1L6xKq',
-        'poly_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1mNlK6abbYiupbznVOdi3wXmYHt7X6ZVN'
-        # 'fully_connected_nn.zip': ''
-        # 'fully_connected_nn_lem.zip': ''
+        'rf_classifier_500.zip': 'https://drive.google.com/uc?export=download&id=1mKYh7weikxT1r_QPvAkGB7HSuXp9yCfo',
+        'rf_classifier_1000.zip': 'https://drive.google.com/uc?export=download&id=1WCtigFIN6W3y7gWOfAAEAGzNwP1MOks4',
+        'linear_svm_classifier.zip': 'https://drive.google.com/uc?export=download&id=1OASD0wt5HaaF9vob5BE6T5KsVSmmK_m0',
+        # 'nn_classifier.zip': 'Work in Progress!'
     }
 
     for entry in models_dict.items():
@@ -85,7 +81,7 @@ def download_pretrained_bert_boosted_models():
         else:
             print("File '" + str(name[0:-4] + '.pkl' + "' already exists"))
     
-    print("Base Models Downloaded.\n\n")
+    print("BERT-Boosted Models Downloaded.\n\n")
 
 ### #### ###
 ### MAIN ###
