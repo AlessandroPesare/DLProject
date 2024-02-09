@@ -8,12 +8,12 @@ def download_datasets():
     file_dict = {
         'jigsaw_train_set.csv': 'https://drive.google.com/uc?export=download&id=1DG3WQxA-Qx358k1bcGXtmkdwXMMGM4yF',
         'jigsaw_test_set.csv': 'https://drive.google.com/uc?export=download&id=14QHA6-99fIGqhQm-occTMvk00JNGhqnA',
-        'training_set.csv': 'https://drive.google.com/uc?export=download&id=1oK-jSYp26iAlpM0otPEapCEfgdmfb7Fv',
-        'training_set_lemmatized.csv': 'https://drive.google.com/uc?export=download&id=1nJvsWvwk_2lWtlmsTEp2i_-coQwI0OFN',
-        'test_set.csv': 'https://drive.google.com/uc?export=download&id=112Q6ebP109U-bvPNcRhSUTL20-_uGKf4',
-        'test_set_lemmatized.csv': 'https://drive.google.com/uc?export=download&id=1rJ2kGp7J3E-P7O22_eshpPO0ZloJbx_Q',
-        'X_train_bert.csv': 'https://drive.google.com/uc?export=download&id=1Ighh847Te0cG8OFqVVaThNp7Yu9i-HCe',
-        'X_test_bert.csv': 'https://drive.google.com/uc?export=download&id=13qt1iTT9v6i2SdlpY3HRp5W9eZCpd46R'
+        'training_set.csv': 'https://drive.google.com/uc?export=download&id=1ISAt0gktW6Wsy1_dAgXH55s4KGq7-efR',
+        'training_set_lemmatized.csv': 'https://drive.google.com/uc?export=download&id=1livxNTJ1mfMd1_mqywBBtxgdY1_MyAMc',
+        'test_set.csv': 'https://drive.google.com/uc?export=download&id=121vKZoda39x-cEY4Gsk3ojHBy52un3lQ',
+        'test_set_lemmatized.csv': 'https://drive.google.com/uc?export=download&id=17dEAau_krrkQs7XsCZHc_f_9iaJ8wBYJ',
+        'X_train_bert.csv': 'https://drive.google.com/uc?export=download&id=1gUfcu6MA5XelHrOzQeyzAm8iXTiktFei',
+        'X_test_bert.csv': 'https://drive.google.com/uc?export=download&id=1HrbuyoDCMe_5f_fQEhji0e8a5mldRzD0'
         }
     
     for entry in file_dict.items():
