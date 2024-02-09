@@ -191,6 +191,8 @@ pyrightconfig.json
 
 *.pdf
 
+.DS_Store
+
 # Non è possibile pushare i file pickle, vanno compressi per risparmiare spazio
 /models/base/*.pkl
 /models/bert_boosted/*.pkl
